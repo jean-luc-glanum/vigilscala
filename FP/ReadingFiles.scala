@@ -8,7 +8,7 @@ object ReadingFiles extends App {
 
  def open(path : String) = new File(path)
 
- implicit class RichFile(file : File) {
+ implicit class ReadFile(file : File) {
     def read() : Iterator[String] = Source.fromFile(file).getLines()
   }
 
